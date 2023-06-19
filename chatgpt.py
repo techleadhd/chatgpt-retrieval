@@ -2,6 +2,7 @@ import os
 import sys
 
 import openai
+from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 from langchain.document_loaders import DirectoryLoader, TextLoader
 from langchain.embeddings import OpenAIEmbeddings
@@ -31,4 +32,8 @@ else:
   else:
     index = VectorstoreIndexCreator().from_loaders([loader])
 
-print(index.query(query, llm=ChatOpenAI()))
+chain = RetrievalQA.from_chain_type(
+  llm=ChatOpenAI(model="gpt-3.5-turbo"),
+  retriever=index.vectorstore.as_retriever(search_kwargs={"k": 1}),
+)
+print(chain.run(query))
