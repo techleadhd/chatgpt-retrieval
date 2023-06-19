@@ -10,6 +10,8 @@ Install [Langchain](https://github.com/hwchase17/langchain).
 ```
 pip install langchain
 pip install openai
+pip install chromadb
+pip install tiktoken
 ```
 Modify `constants.py` to use your own [OpenAI API key](https://platform.openai.com/account/api-keys).
 
