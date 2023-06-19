@@ -10,10 +10,9 @@ Install Langchain https://github.com/hwchase17/langchain.
 pip install langchain
 pip install openai
 ```
-Modify `constants.py to add your own OpenAI API key. https://platform.openai.com/account/api-keys.
+Modify `constants.py` to use your own OpenAI API key. https://platform.openai.com/account/api-keys.
 
-Add your own data into "data.txt"
-
+Place your own data into "data.txt".
 
 **Example usage:**
 ```
