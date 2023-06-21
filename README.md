@@ -12,7 +12,7 @@ git clone git@github.com:techleadhd/chatgpt-retrieval.git && cd chatgpt-retrieva
 pip install -r requirements.txt
 ```
 
-Create a `.env` file and add your own key to `OPEN_API_KEY=""` [OpenAI API key](https://platform.openai.com/account/api-keys). 
+Create a `.env` file and add your own key to `OPENAI_API_KEY=""` [OpenAI API key](https://platform.openai.com/account/api-keys). 
 
 Create two directories:
     0. `inputs`: This will hold your input files that are to be ingested (pdf's by default)
