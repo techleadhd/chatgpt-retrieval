@@ -15,12 +15,10 @@ pip install tiktoken
 ```
 Modify `constants.py` to use your own [OpenAI API key](https://platform.openai.com/account/api-keys).
 
-Place your own files into the mydata folder.
-
+Place your own data into `data.txt`.
 
 ## Example usage
 ```
-> python sync.py
 > python chatgpt.py "what is my dog's name"
 Your dog's name is Sunny.
 ```
