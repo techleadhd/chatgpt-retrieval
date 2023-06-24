@@ -6,12 +6,9 @@ Here's the [YouTube Video](https://youtu.be/9AXP7tCI9PI).
 
 ## Installation
 
-Install [Langchain](https://github.com/hwchase17/langchain).
+Install [Langchain](https://github.com/hwchase17/langchain) and other required packages.
 ```
-pip install langchain
-pip install openai
-pip install chromadb
-pip install tiktoken
+pip install langchain openai chromadb tiktoken beautifulsoup4
 ```
 Modify `constants.py` to use your own [OpenAI API key](https://platform.openai.com/account/api-keys).
 
