@@ -1,0 +1,9 @@
+langchain==0.0.218
+openai==0.27.8
+chromadb==0.3.26
+tiktoken==0.4.0
+unstructured==0.7.10
+wrapt==1.15
+ipython==8.14.0
+python-dotenv==1.0.0
+pypdf==3.11.1
