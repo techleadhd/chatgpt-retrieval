@@ -2,7 +2,7 @@ import os
 import sys
 
 import openai
-from langchain.chains import RetrievalQA
+from langchain.chains import ConversationalRetrievalChain, RetrievalQA
 from langchain.chat_models import ChatOpenAI
 from langchain.document_loaders import DirectoryLoader, TextLoader
 from langchain.embeddings import OpenAIEmbeddings
@@ -18,7 +18,9 @@ os.environ["OPENAI_API_KEY"] = constants.APIKEY
 # Enable to save to disk & reuse the model (for repeated queries on the same data)
 PERSIST = False
 
-query = sys.argv[1]
+query = None
+if len(sys.argv) > 1:
+  query = sys.argv[1]
 
 if PERSIST and os.path.exists("persist"):
   print("Reusing index...\n")
@@ -32,8 +34,19 @@ else:
   else:
     index = VectorstoreIndexCreator().from_loaders([loader])
 
-chain = RetrievalQA.from_chain_type(
+chain = ConversationalRetrievalChain.from_llm(
   llm=ChatOpenAI(model="gpt-3.5-turbo"),
   retriever=index.vectorstore.as_retriever(search_kwargs={"k": 1}),
 )
-print(chain.run(query))
+
+chat_history = []
+while True:
+  if not query:
+    query = input("Prompt: ")
+  if query in ['quit', 'q', 'exit']:
+    sys.exit()
+  result = chain({"question": query, "chat_history": chat_history})
+  print(result['answer'])
+
+  chat_history.append((query, result['answer']))
+  query = None
