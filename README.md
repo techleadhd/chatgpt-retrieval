@@ -8,9 +8,9 @@ Here's the [YouTube Video](https://youtu.be/9AXP7tCI9PI).
 
 Install [Langchain](https://github.com/hwchase17/langchain) and other required packages.
 ```
-pip install langchain openai chromadb tiktoken unstructured pypdf
+pip install langchain openai chromadb tiktoken unstructured pypdf pythondotenv wrapt==1.15
 ```
-You can also use `pip install -r requirements.txt`
+You can use `pip install -r requirements.txt`
 
 Rename `.env-template` to `.env` use your own [OpenAI API key](https://platform.openai.com/account/api-keys).
 
