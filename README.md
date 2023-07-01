@@ -10,9 +10,9 @@ Install [Langchain](https://github.com/hwchase17/langchain) and other required p
 ```
 pip install langchain openai chromadb tiktoken unstructured pypdf pythondotenv wrapt==1.15
 ```
-You can use `pip install -r requirements.txt`
 
-Rename `.env-template` to `.env` use your own [OpenAI API key](https://platform.openai.com/account/api-keys).
+Modify `.env.template` to use your own [OpenAI API key](https://platform.openai.com/account/api-keys), and rename it to `.env.py`.
+
 
 Place your own data into `data/data.txt`.
 
