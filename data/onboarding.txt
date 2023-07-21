@@ -1,0 +1,68 @@
+Test Inc.
+Onboarding Document for New Employees
+
+Welcome to Test Inc.!
+
+Dear Ted Test,
+
+Congratulations on joining Test Inc.! We are thrilled to have you as a part of our team. This onboarding document has been prepared to guide you through the initial steps of your journey with us. It will provide you with essential information and resources to help you settle in and understand our company culture, policies, and procedures.
+
+Your First Day:
+
+1. Arrival and Check-in:
+   - Please arrive at the office at the scheduled time on your first day. [If remote work:] Ensure you have the necessary equipment and access to our communication tools and systems.
+   - Report to the front desk/reception to receive your visitor's pass and be directed to your orientation location.
+
+2. Introduction and Orientation:
+   - You will be introduced to your team members, manager, and other colleagues.
+   - Attend a comprehensive orientation session where you will learn about our company's history, mission, vision, values, and culture.
+   - Get an overview of your job responsibilities and expectations.
+
+3. IT Setup:
+   - [If remote work:] Our IT team will guide you through the process of setting up your work equipment and access to our systems.
+   - [If office-based:] You will receive your work equipment, email account, and necessary software access.
+
+4. Office Tour (If applicable):
+   - If you are working from our office, you will be given a tour to familiarize yourself with the office layout, facilities, and amenities.
+
+Your First Week:
+
+1. Training and Development:
+   - Participate in on-the-job training and workshops to enhance your skills and knowledge related to your role.
+   - Familiarize yourself with our company's tools, systems, and processes.
+
+2. Company Policies and Guidelines:
+   - Review our company handbook, which outlines all our policies, guidelines, and employee expectations.
+   - If you have any questions or need further clarification, don't hesitate to ask your manager or HR.
+
+3. Meetings:
+   - Attend team and department meetings to understand ongoing projects and objectives.
+   - Schedule one-on-one meetings with your manager to discuss your progress and set performance goals.
+
+4. Social Events:
+   - We encourage you to participate in our company social events and activities to get to know your colleagues better.
+
+Beyond Your First Week:
+
+1. Performance Evaluation:
+   - Regular performance evaluations will be conducted to provide feedback on your work and progress.
+   - You will have the opportunity to discuss your performance, growth, and any concerns with your manager.
+
+2. Employee Benefits:
+   - Review our comprehensive benefits package and follow the guidelines for enrollment (if applicable).
+
+3. Communication Channels:
+   - Stay updated with company news, announcements, and important information through our communication channels.
+
+4. Employee Assistance Program (EAP):
+   - We provide an Employee Assistance Program to support your well-being and personal development.
+
+We are delighted to have you as a part of our team, and we believe that your skills and experience will be valuable assets to our company. If you have any questions or need assistance during your onboarding process, please reach out to the HR department or your assigned mentor.
+
+Welcome once again to [Company Name]! We wish you a successful and rewarding journey with us.
+
+Best regards,
+
+Test Manager
+Software Engineering Manager
+Test Inc.
