@@ -1,5 +1,5 @@
-chromadb 
-langchain 
-openai 
-tiktoken 
-unstructured
+chromadb==0.4.4
+langchain==0.0.249
+openai==0.27.8
+tiktoken==0.4.0
+unstructured==0.8.8
