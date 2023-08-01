@@ -10,7 +10,10 @@ Install [Langchain](https://github.com/hwchase17/langchain) and other required p
 ```
 pip install langchain openai chromadb tiktoken unstructured
 ```
-Modify `constants.py.default` to use your own [OpenAI API key](https://platform.openai.com/account/api-keys), and rename it to `constants.py`.
+Get an OpenAI API key from [OpenAI API key](https://platform.openai.com/account/api-keys), and add it to your environment.
+```
+$ export OPENAI_API_KEY=sk-ThisIsABogusOpenAIApiKeyThatYouGotFromTheirSite1
+```
 
 Place your own data into `data/data.txt`.
 
