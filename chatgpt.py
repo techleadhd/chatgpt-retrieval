@@ -1,3 +1,4 @@
+#! env python
 import os
 import sys
 
@@ -11,9 +12,6 @@ from langchain.indexes.vectorstore import VectorStoreIndexWrapper
 from langchain.llms import OpenAI
 from langchain.vectorstores import Chroma
 
-import constants
-
-os.environ["OPENAI_API_KEY"] = constants.APIKEY
 
 # Enable to save to disk & reuse the model (for repeated queries on the same data)
 PERSIST = False
