@@ -6,11 +6,23 @@ Here's the [YouTube Video](https://youtu.be/9AXP7tCI9PI).
 
 ## Installation
 
-Install [Langchain](https://github.com/hwchase17/langchain) and other required packages.
+Install `pipenv` if you don't have it already
 ```
-pip install langchain openai chromadb tiktoken unstructured
+pip install pipenv
 ```
-Modify `constants.py.default` to use your own [OpenAI API key](https://platform.openai.com/account/api-keys), and rename it to `constants.py`.
+
+Install required packages from Pipfile using `pipenv` 
+```
+pipenv install
+```
+
+Activate the virtual environment
+```
+pipenv shell
+```
+
+
+## Custom Data
 
 Place your own data into `data/data.txt`.
 
