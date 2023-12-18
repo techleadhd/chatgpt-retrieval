@@ -1,1 +1,22 @@
-My dog's name is Sunny.
+Weekly schedule of makers
+
+Weeks 1-8: Software Fundamentals: TDD and Object Oriented Programming
+Weeks 9 – 16: Specialism in Software Development, Data, Cloud or Quality.
+
+
+Software Development
+How to learn new languages
+Working with mobile apps
+Working with web apps
+Cloud Engineering
+Continuous Integration and Deployment
+Working with cloud apps
+Problem-solving in a live environment
+Quality Engineering
+Manual and automatic software testing
+Quality throughout the software lifecycle
+Live exercises with devs on other tracks
+Data Engineering
+SQL and data processing
+Data analysis and presenting insights
+Data warehouse modelling
