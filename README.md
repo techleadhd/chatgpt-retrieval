@@ -1,5 +1,28 @@
+## Chatbot for makers.tech
+
+openAI chatgpt3 free tier integration
+Chatbot data from data files PDF, text
+chatbot data extraction from makers.tech
+
+
+## update Constants
+# Replace with your own OpenAI API Key https://platform.openai.com/account/api-keys
+# and rename this file to constants.py.
+#APIKEY =  "sk-<your key here>"
+
+
+
+
 ## Installation
 
-Install [Langchain](https://github.com/hwchase17/langchain) and other required packages.
-```
-pip install langchain openai chromadb tiktoken unstructured
+1. pipenv install
+
+2. pinev shell
+
+3. pip install flask
+
+4. pip install beautifulsoup4
+
+5. pip install PyPDF2
+
+6. pytest

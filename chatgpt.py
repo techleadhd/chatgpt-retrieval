@@ -1,32 +1,43 @@
 
-
 import os
 import openai
-import PyPDF2
+
+import requests
+from bs4 import BeautifulSoup
 from flask import Flask, request, jsonify, render_template
 
-
 app = Flask(__name__)
-app.debug = True
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Function to read PDF files
 from PyPDF2 import PdfReader
 
-def read_pdf(file):
-    pdf_reader = PdfReader(file)
-    text = ""
-    for page in pdf_reader.pages:
-        text += page.extract_text()
-    return text
+def read_pdf(file_path):
+    with open(file_path, 'rb') as file:
+        pdf_reader = PdfReader(file)
+        text = ''
+        for page in pdf_reader.pages:
+            text += page.extract_text()
+        return text
 
 # Function to read text files
 def read_text_file(file_path):
     with open(file_path, 'r') as file:
         return file.read()
 
-# Load and index your data
-data_folder = 'data/'
+# Function to fetch and parse website content
+def fetch_website_content(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+        text = ' '.join(soup.stripped_strings)
+        return text
+    except requests.RequestException as e:
+        return f"Error fetching website content: {e}"
+
+# Load and index data
+data_folder = '/Users/fawaztarar/Documents/chatgpt/chatgpt-retrieval/data'  # Replace with your actual data folder path
 data = {}
 for file_name in os.listdir(data_folder):
     file_path = os.path.join(data_folder, file_name)
@@ -35,31 +46,29 @@ for file_name in os.listdir(data_folder):
     elif file_name.endswith('.txt'):
         data[file_name] = read_text_file(file_path)
 
+# Fetch and add website content to data
+website_content = fetch_website_content('https://makers.tech')
+if website_content and not isinstance(website_content, Exception):
+    data['makers_tech_website'] = website_content
+
 def simple_search(query):
-    # Convert query to lowercase for case-insensitive matching
     query = query.lower()
     best_match = None
     highest_count = 0
 
-    # Iterate over each document in your data
     for file_name, text in data.items():
-        # Convert text to lowercase
         text_lower = text.lower()
-        # Count occurrences of the query in the text
         count = text_lower.count(query)
         if count > highest_count:
             highest_count = count
             best_match = text
 
-    # If a match is found, return the relevant text
     if best_match:
-        # Optional: return a snippet around the first occurrence of the query
         start_index = best_match.lower().find(query)
         end_index = start_index + len(query)
         snippet = best_match[max(0, start_index-30):min(end_index+30, len(best_match))]
         return snippet
 
-    # Return a default message if no match is found
     return "No relevant information found."
 
 @app.route('/')
@@ -92,7 +101,7 @@ def handle_query():
     return jsonify({"answer": answer})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, port=5001) # Set to False in production
 
 
 
