@@ -23,6 +23,23 @@ chatbot data extraction from makers.tech
 
 4. pip install beautifulsoup4
 
+    pip install requests beautifulsoup4
+
+
 5. pip install PyPDF2
 
-6. pytest
+6. pip install scrapy
+
+7. pytest
+
+8. pip install aiofiles
+
+9. pip install elasticsearch
+
+10. psql CREATE DATABASE chatbot_db;
+
+11. pip install Flask-SQLAlchemy psycopg2-binary
+
+12. pip install pdfplumber
+
+

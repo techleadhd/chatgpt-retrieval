@@ -1,55 +1,130 @@
 
 import os
 import openai
-
 import requests
-from bs4 import BeautifulSoup
 from flask import Flask, request, jsonify, render_template
+from flask import current_app
+import json
+from PyPDF2 import PdfReader
+from flask_sqlalchemy import SQLAlchemy
+import pdfplumber
+from bs4 import BeautifulSoup
+
+
 
 app = Flask(__name__)
 openai.api_key = os.getenv("OPENAI_API_KEY")
+#es = Elasticsearch()
 
-# Function to read PDF files
-from PyPDF2 import PdfReader
+## DATABASE
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///chatbot_db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
-def read_pdf(file_path):
+
+
+
+class ExtractedData(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    source = db.Column(db.String, nullable=False)  # e.g., 'web' or 'file'
+    content = db.Column(db.Text, nullable=False)
+
+    def __repr__(self):
+        return f'<ExtractedData {self.source}>'
+
+@app.before_first_request
+def create_tables():
+    db.create_all()
+
+def store_data(source, content):
+    new_data = ExtractedData(source=source, content=content)
+    db.session.add(new_data)
+    db.session.commit()
+
+def query_data(keyword):
+    search = f"%{keyword}%"
+    results = ExtractedData.query.filter(ExtractedData.content.like(search)).all()
+    return results
+
+
+
+
+
+
+
+
+def read_file(file_path):
+    # Determine the file type from the extension
+    _, file_extension = os.path.splitext(file_path)
+
+    if file_extension.lower() == '.pdf':
+        return read_pdf_combined(file_path)
+    elif file_extension.lower() in ['.txt', '.md', '.html']:  # Add other text file extensions if needed
+        return read_text_file_sync(file_path)
+    else:
+        return "Unsupported file format"
+
+def read_pdf_combined(file_path):
+    text = ''
     with open(file_path, 'rb') as file:
-        pdf_reader = PdfReader(file)
-        text = ''
-        for page in pdf_reader.pages:
-            text += page.extract_text()
-        return text
+        pdf_reader = PyPDF2.PdfFileReader(file)
+        for page_num in range(pdf_reader.numPages):
+            page_text = pdf_reader.getPage(page_num).extractText()
+            if page_text:
+                text += page_text
+            else:
+                text = read_pdf_with_pdfplumber(file_path)
+                break
+    return text
 
-# Function to read text files
-def read_text_file(file_path):
+def read_pdf_with_pdfplumber(file_path):
+    text = ''
+    with pdfplumber.open(file_path) as pdf:
+        for page in pdf.pages:
+            text += page.extract_text() or ''
+    return text
+
+def read_text_file_sync(file_path):
     with open(file_path, 'r') as file:
         return file.read()
+    
 
-# Function to fetch and parse website content
-def fetch_website_content(url):
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
-        text = ' '.join(soup.stripped_strings)
-        return text
-    except requests.RequestException as e:
-        return f"Error fetching website content: {e}"
 
-# Load and index data
-data_folder = '/Users/fawaztarar/Documents/chatgpt/chatgpt-retrieval/data'  # Replace with your actual data folder path
-data = {}
-for file_name in os.listdir(data_folder):
-    file_path = os.path.join(data_folder, file_name)
-    if file_name.endswith('.pdf'):
-        data[file_name] = read_pdf(file_path)
-    elif file_name.endswith('.txt'):
-        data[file_name] = read_text_file(file_path)
 
-# Fetch and add website content to data
-website_content = fetch_website_content('https://makers.tech')
-if website_content and not isinstance(website_content, Exception):
-    data['makers_tech_website'] = website_content
+# Load data from Scrapy's output (JSON file)
+def load_scrapy_data(scrapy_output_file):
+    if os.path.exists(scrapy_output_file):
+        with open(scrapy_output_file, 'r') as file:
+            return json.load(file)
+    else:
+        return {}
+
+# Combine data from both Scrapy output and text/PDF files
+def load_combined_data(data_folder, scrapy_output_file):
+    combined_data = load_scrapy_data(scrapy_output_file)
+
+    for file_name in os.listdir(data_folder):
+        file_path = os.path.join(data_folder, file_name)
+        if file_name.endswith('.pdf'):
+            combined_data[file_name] = read_pdf_sync(file_path)
+        elif file_name.endswith('.txt'):
+            combined_data[file_name] = read_text_file_sync(file_path)
+
+    return combined_data
+
+# Specify the paths
+data_folder = '/Users/fawaztarar/Documents/chatgpt/chatgpt-retrieval/data'
+scrapy_output_file = '/Users/fawaztarar/Documents/chatgpt/chatgpt-retrieval/myproject/myproject/spiders/output.json'
+
+# Load and combine data
+data = load_combined_data(data_folder, scrapy_output_file)
+
+# Flask routes and the rest of your app...
+
+
+
+
+
 
 def simple_search(query):
     query = query.lower()
@@ -70,6 +145,8 @@ def simple_search(query):
         return snippet
 
     return "No relevant information found."
+
+
 
 @app.route('/')
 def chatbot():
@@ -100,6 +177,13 @@ def handle_query():
 
     return jsonify({"answer": answer})
 
+
+
+@app.route('/test_error')
+def test_error():
+    raise Exception('Test exception')
+
+
 if __name__ == '__main__':
     app.run(debug=False, port=5001) # Set to False in production
 
@@ -114,87 +198,3 @@ if __name__ == '__main__':
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# import os
-# import sys
-# from flask import Flask, request, jsonify, render_template
-
-# import openai
-# from langchain.chains import ConversationalRetrievalChain, RetrievalQA
-# from langchain.chat_models import ChatOpenAI
-# from langchain.document_loaders import DirectoryLoader, TextLoader
-# from langchain.embeddings import OpenAIEmbeddings
-# from langchain.indexes import VectorstoreIndexCreator
-# from langchain.indexes.vectorstore import VectorStoreIndexWrapper
-# from langchain.llms import OpenAI
-# from langchain.vectorstores import Chroma
-
-# import constants
-
-# os.environ["OPENAI_API_KEY"] = constants.APIKEY
-
-# # Enable to save to disk & reuse the model (for repeated queries on the same data)
-# PERSIST = False
-
-# # Flask app
-# app = Flask(__name__)
-
-# @app.route('/')
-# def chatbot():
-#     return render_template('ai_chatbot.html')
-
-# # Initialize the ConversationalRetrievalChain
-# if PERSIST and os.path.exists("persist"):
-#     print("Reusing index...\n")
-#     vectorstore = Chroma(persist_directory="persist", embedding_function=OpenAIEmbeddings())
-#     index = VectorStoreIndexWrapper(vectorstore=vectorstore)
-# else:
-#     #loader = TextLoader("data/data.txt") # Use this line if you only need data.txt
-#     loader = DirectoryLoader("data/")
-#     if PERSIST:
-#         index = VectorstoreIndexCreator(vectorstore_kwargs={"persist_directory": "persist"}).from_loaders([loader])
-#     else:
-#         index = VectorstoreIndexCreator().from_loaders([loader])
-
-# chain = ConversationalRetrievalChain.from_llm(
-#     llm=ChatOpenAI(model="gpt-3.5-turbo"),
-#     retriever=index.vectorstore.as_retriever(search_kwargs={"k": 1}),
-# )
-
-# @app.route('/query', methods=['POST'])
-# def handle_query():
-#     data = request.json
-#     query = data.get('query')
-#     chat_history = data.get('chat_history', [])
-    
-#     if query:
-#         result = chain({"question": query, "chat_history": chat_history})
-#         answer = result['answer']
-#         chat_history.append((query, answer))
-#         return jsonify({"answer": answer, "chat_history": chat_history})
-#     else:
-#         return jsonify({"error": "No query provided"}), 400
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
-
-
-    #host="0.0.0.0" # Listen for connections _to_ any server
-    

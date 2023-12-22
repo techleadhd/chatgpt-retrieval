@@ -106,3 +106,18 @@ def test_handle_query(mock_simple_search, mock_chat_completion):
         response = client.post('/query', data=json.dumps({}), content_type='application/json')
         assert response.status_code == 400
         assert b'No query provided' in response.data
+
+
+
+from unittest import mock
+from flask import current_app
+from chatgpt import app
+
+def test_handle_exception():
+    with app.app_context():
+        with app.test_client() as client:
+            with mock.patch.object(current_app.logger, 'error') as mock_error:
+                response = client.get('/test_error')
+                assert response.status_code == 500
+                assert b'Internal Server Error' in response.data
+                print(mock_error.call_args)
