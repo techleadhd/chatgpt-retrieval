@@ -19,6 +19,9 @@ chatbot data extraction from makers.tech
 
 2. pinev shell
 
+3. pip install pytest
+
+
 3. pip install flask
 
 4. pip install beautifulsoup4
