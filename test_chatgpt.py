@@ -1,82 +1,38 @@
-import os
+
+
+
+import json
 import pytest
-from chatgpt import read_pdf
-from PyPDF2 import PdfReader
+from chatgpt import app
 
-def test_read_pdf():
-    # Path to a sample PDF file for testing
-    sample_pdf_path = os.path.join(os.path.dirname(__file__), 'data/makers_brochure.pdf')
+@pytest.fixture
+def client():
+    app = create_app()  # Adjust this to how your Flask app is initialized
+    app.config['TESTING'] = True
+    with app.test_client() as client:
+        yield client
 
-    # Call the function with the sample PDF file
-    result = read_pdf(sample_pdf_path)
+def test_chatbot_route(client):
+    response = client.get('/')
+    assert response.status_code == 200
+    assert 'text/html' in response.content_type
 
-    # Check that the result is a string (since the function should return the extracted text)
-    assert isinstance(result, str)
+def test_query_route(client):
+    # Test with valid query
+    response = client.post('/query', json={'query': 'Hello'})
+    assert response.status_code == 200
+    assert 'application/json' in response.content_type
+    assert 'answer' in response.get_json()
 
-    # Check that the result is not empty (since the sample PDF file should contain some text)
-    assert len(result) > 0
+    # Test with no query
+    response = client.post('/query', json={})
+    assert response.status_code == 400
+    assert 'error' in response.get_json()
 
+def test_error_route(client):
+    response = client.get('/test_error')
+    assert response.status_code == 500
 
-
-import os
-import tempfile
-from chatgpt import read_text_file
-
-def test_read_text_file():
-    # Create a temporary file and write some text to it
-    with tempfile.NamedTemporaryFile(delete=False) as temp_file:
-        temp_file.write(b'Test text')
-        temp_path = temp_file.name
-
-    # Use the function to read the text back from the file
-    result = read_text_file(temp_path)
-
-    # Check that the function correctly read the text
-    assert result == 'Test text'
-
-    # Clean up the temporary file
-    os.remove(temp_path)
-
-
-
-import requests
-from bs4 import BeautifulSoup
-from chatgpt import fetch_website_content
-
-def test_fetch_website_content():
-    # Use httpbin to create a test URL that returns a known response
-    test_url = 'https://httpbin.org/html'
-    expected_text = 'Herman Melville - Moby-Dick'
-
-    # Use the function to fetch and parse the content
-    result = fetch_website_content(test_url)
-
-    # Check that the function correctly fetched and parsed the content
-    assert expected_text in result
-
-
-
-
-
-from unittest import mock
-from chatgpt import simple_search
-
-def test_simple_search():
-    # Mock the data dictionary
-    data = {
-        'file1.txt': 'This is a test file. It contains some text.',
-        'file2.txt': 'This is another test file. It contains some different text.',
-    }
-
-    # Patch the data dictionary in the module where simple_search is defined
-    with mock.patch('chatgpt.data', data):
-        # Test that the function correctly finds the best match for a query
-        result = simple_search('test')
-        assert 'This is a test file' in result
-
-        # Test that the function returns a message when no match is found
-        result = simple_search('nonexistent')
-        assert result == 'No relevant information found.'
 
 
 

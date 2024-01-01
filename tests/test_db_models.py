@@ -1,7 +1,8 @@
 # test_models.py
 import pytest
 from lib.db_models import create_app, db
-from your_flask_app.models import ExtractedData
+from lib.db_models import ExtractedData
+from lib.db_models import store_data, query_data
 
 @pytest.fixture
 def test_app():
@@ -23,14 +24,7 @@ def test_extracted_data_model(test_app):
         assert new_data.content == 'test content'
 
 
-# test_functions.py
-import pytest
-from your_flask_app import create_app, db, store_data, query_data
-from your_flask_app.models import ExtractedData
 
-@pytest.fixture
-def test_app():
-    # Same as above
 
 def test_store_data(test_app):
     with test_app.app_context():

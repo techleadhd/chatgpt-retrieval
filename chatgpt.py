@@ -9,16 +9,29 @@ from PyPDF2 import PdfReader
 from flask_sqlalchemy import SQLAlchemy
 import pdfplumber
 from bs4 import BeautifulSoup
-
-# chatgpt.py
+from lib.config import Config
+from lib.db_models import db
+from lib.db_models import ExtractedData
+from lib.db_models import create_app, db, store_data, query_data
+from lib.search import simple_search
 from flask import Flask
 from lib.config import Config
 from lib.db_models import db
 
 
-app = Flask(__name__)
-app.config.from_object(Config)
-db.init_app(app)
+
+from flask import Flask
+from lib.db_models import db
+
+
+def create_app():
+    app = Flask(__name__)
+    app.config.from_object(Config)
+
+    # Initialize extensions with the app instance
+    db.init_app(app)
+
+    return app
 
 
 

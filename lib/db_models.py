@@ -1,4 +1,9 @@
 from flask_sqlalchemy import SQLAlchemy
+from chatgpt import app
+
+
+db = SQLAlchemy()
+
 
 
 
