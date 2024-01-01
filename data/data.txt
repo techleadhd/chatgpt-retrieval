@@ -1,1 +1,1220 @@
-My dog's name is Sunny.
+1
+1
+Welcome 
+to Makers
+
+2
+2
+Makers enabled me to 
+change my life. I wanted 
+ 
+to do something which I was 
+passionate about, so I made 
+the scary decision to change 
+careers and pursue software 
+development. I now work 
+at one of the hottest tech 
+startups and work with some 
+of the most brilliant and 
+talented people Œ building 
+amazing solutions, learning 
+at an accelerated pace and 
+I love I what do. I never 
+thought I would actually say 
+that I look forward to going 
+to work.
+ﬁ
+ﬁ
+COSTAS KITEOU, MAKERS
+
+3
+3
+1.     A Message from our CEO, Evgeny Shadchnev
+3.     Makers History, Vision & Mission 
+5.     What we believe: a message from Dana 
+7.     Getting set up! 
+8.     Prepare for PreCourse
+9.     Tips for remote working
+12.    Finance
+11.    Responsibilities 
+13.   Curriculum
+16.    Blogging 
+17.    Meet Makers
+Contents
+
+1
+1
+The time I spent at Makers was not 
+easy. During the course there was a 
+constant feeling of being on your back 
+foot, falling behind or otherwise just 
+not understanding anything. It was only 
+after I completed the course did I see 
+the real merit of what I had been taught. 
+Makers doesn™t just teach you how to 
+code, it teaches you how to be a coder. 
+From soft skills to team management, to 
+understanding acceptance and rejection 
+during the job hunt, Makers has given 
+me a well-rounded view of the industry 
+and one that I hope will continue long 
+into my career. The holistic approach to 
+development is a wonderful bonus as well, 
+and all the coaches and staff are friendly 
+and helpful.
+ﬁ
+ﬁ
+RUPERT ADAMS
+
+1
+1
+Major congratulations for joining Makers - 
+we™re really looking forward to helping you 
+˜nd your feet as a developer. I wanted to say 
+a quick hello and explain why we™re excited 
+to have you on board. 
+First of all, we pride ourselves on being 
+much more than just a coding bootcamp. 
+We know that Makers changes lives. You 
+can see this from reading the stories of 
+various students - like this 
+mother-of-four 
+Kate Morris
+, or Jordan Roberts who 
+left law 
+to retrain into tech
+, or the countless other 
+student stories you can 
+read on our blog.
+ 
+We™re looking forward to hearing your story. 
+Secondly, we know that your relationship 
+with Makers doesn™t end when the training 
+does. ‚Once a Maker, Always a Maker ™ is 
+something we pride ourselves on, and you 
+can 
+read more about our alumni community 
+here.
+ We™re excited that you™ll get to join this 
+group once you ˜nish training. 
+A message 
+from our 
+founder, 
+Evgeny 
+Shadchnev
+Lastly, I wanted to share why  
+I started Makers. Essentially,  
+I believed that there was a 
+better way to link education to  
+employment. Our goal was (and  
+still is) to help people become  
+developers and start exciting new  
+careers. Yet, our work has bigger  
+implications in terms of the impact  
+on the society that our developers  
+will have. You can 
+read more about  
+my thoughts on that here.
+ 
+
+2
+2
+Essentially, the tech  
+revolution is affecting 
+ 
+every single industry  
+ 
+and every single business,  
+
+and it ™s only getting started.  
+Hopefully you™ll learn from us, just by 
+virtue of being on campus, that looking 
+
+after each other matters. That everyone 
+
+matters, and everyone should have a 
+
+voice. That pro˜t shouldn™t be the only 
+
+motive in life. Those feelings have a 
+
+place in the professional world. That 
+
+mental health is just as important as 
+
+physical health.
+That it ™s okay not to work  
+with an employer that is  
+
+harming the society and  
+
+the environment. That it ™s  
+
+important to pay it forward,  
+
+just because you can. That  
+ 
+we need to learn to have 
+
+difficult conversations  
+
+about equality, reverse  
+
+sexism, invisible privilege  
+
+and other difficult topics,  
+
+in order to move forward  
+
+as the tech industry and  
+
+society in general.
+You will build the next generation  
+of technology, guided by values you 
+
+pick up here, at Makers. I hope you 
+
+build good things.
+Best of luck, Evgeny
+
+3
+3
+In 2013, co-founders Evgeny  
+ 
+and Rob met at Forward  
+Labs and got to talking about 
+the problems people have 
+learning to code. Evgeny  
+had trained as a software  
+developer at Imperial College  
+and as he was trying to build  
+out his team he discovered a  
+lack of qualified developers  
+on the market. Rob had  
+been through the arduous  
+process of teaching himself to  
+programme through a book  
+on Objective C.
+ 
+They both saw that traditional 
+education was broken. The vision they 
+had was for Makers to be an alternative 
+to university and a vocational route 
+into a job as a software developer. 
+Makers would train people to 
+ 
+become software engineers in only 
+three months Š it would be a platform 
+ 
+to provide the world™s most e˚cient 
+introduction to programming 
+principles.
+Back then, Rob wrote what still 
+ 
+rings true today:
+ﬁMakers is not for everyone. 
+Some people are okay 
+investing the time and money  
+into getting a computer 
+science degree and that ™s  
+great. Others are okay with  
+the inefficiencies in teaching  
+themselves and just want  
+to learn enough to get by.  
+For the rest, we™re building  
+Makers.ﬂ
+Makers 
+History,
+ 
+Vision 
+ 
+& Mission
+3
+
+4
+4
+We™re 
+ 
+proud  
+ 
+to have:
+Ł
+ 
+Trained over 1700 Makers (on 
+ 
+average 35% of them were women);
+ 
+Ł
+ 
+Connected them to over 250 of 
+London™s top technology companies 
+(Deliveroo, British Gas, Starling Bank, 
+Financial Times, Compare The Market.
+com, Tesco, among others);
+ 
+Ł
+ 
+Grown to a team of over 40 people, 
+with the philosophy of ‚ trust over fear ™;
+ 
+Ł
+ 
+Been included in 2018™s UpScale 
+cohort, which aims to support the 
+growth of the UK™s most exciting and 
+innovative companies Š we™re excited 
+to leverage that to widen our impact 
+on the tech industry.
+We™re proud to have proven 
+ 
+that a complete beginner 
+ 
+can get an amazing job 
+ 
+in software development 
+ 
+in just a few months.
+In the coming years we™ll double-down on 
+making our course even more accessible and 
+inclusive; helping our Makers learn a wider 
+range of skills; working with even more hiring 
+partners across all industries, so that many 
+more thousands of newly trained software 
+developers can start careers they truly love.
+
+5
+5
+Hi, I™m Dana. I™ve worked in the tech 
+industry for almost a decade. I have been 
+with Makers since 2014. Here, we believe 
+that world-class developers are not only 
+technically skilled but are also strong 
+communicators and collaborators. This 
+is why we have an emotional intelligence 
+curriculum, which I™ve developed. 
+ 
+I wanted to take a few 
+moments to welcome you 
+onto the course and to set our 
+expectations around mindset.
+Makers is a fast-moving environment. 
+Students almost always feel behind in the 
+amount that they have to absorb as there™s 
+so much to learn each day. The course is 
+designed that way. I encourage students to 
+try to make peace with doing your best, as 
+stressing about not being able to complete 
+everything ultimately slows you down. 
+What we 
+believe: 
+A message 
+from Dana, 
+our Chief 
+Joy Officer
+5
+
+6
+6
+Learning is the point, not  
+completing everything. It™s  
+easy to get caught up in the  
+Makers journey and forget  
+this.  
+As long as you™re doing your best and 
+focusing on learning, not completion, 
+you™re likely to be progressing in a more 
+optimal way. There™s a ˜ne line between 
+pushing yourself and over-doing 
+ 
+it. With proper attention to self-care, 
+you can be sensitive to that line and 
+avoid burnout.
+At Makers we value a sense of 
+autonomy in work and learning. 
+Students engage with self-led learning 
+which means they are in control of 
+their journeys. You™re expected to set 
+and take charge of your own goals, 
+which is quite a new concept for 
+most (especially those coming from 
+traditional education, where there are 
+generally clear hoops to jump through). 
+It can take some time adjusting to that 
+and can sometimes leave you feeling 
+out of control.
+Certainty is a core human need but is 
+often a rare commodity at Makers, as 
+the curriculum is deliberately designed 
+to keep you on your toes as you have 
+ 
+a series of coding curve-balls thrown 
+ 
+at you˛Š˛being aware of this helps 
+prevent burnout from creeping in.
+Remind yourself to trust the process 
+and reach for what is certain in your 
+ 
+life: your support network (Makers sta˝
+ 
+/resources, cohort members, family, 
+friends, hobbies, values etc.).
+Drop expectations that you might 
+ 
+have had about how the course should 
+go for you and try to be present, while 
+allowing the process to take you on 
+the journey. If you value a high level 
+of control in your life then this is the 
+perfect opportunity to practice being 
+˙exible and adaptable as those qualities 
+rank high in what makes a great 
+developer.
+Welcome to your Makers 
+journey. I™m looking forward 
+to supporting you. 
+
+7
+7
+Getting
+Set up!
+7
+
+8
+8
+S
+et
+t
+ing
+ 
+u
+p
+ a
+ 
+c
+od
+i
+ng 
+e
+n
+vir
+onment
+If you are using a Mac, 
+ a 
+ 
+ 
+of the tools 
+you will need to create a dev 
+
+environment on your computer.
+Henry and Emma,
+ two of the Makers 
+assistant coaches, have written about 
+
+setting up a Cloud9 AWS developer 
+environment that  
+you can use on any operating systems  
+-
+if you are a Windows user, we
+recommend using this environment.
+Passing the PreCourse
+Nikesh™s post
+ on passing the PreCourse 
+is a helpful summary on what the goal  
+
+of the PreCourse is, and how an 
+
+e˝ectively ful˜lled PreCourse can set  
+
+you up for success later on with our  
+
+hiring partners. 
+- You are expected to work independently
+as much as possible
+- You should be working on improving
+your problem solving processes
+- PreCourse is an opportunity to get
+to know your cohort and learn how
+to learn from others
+We hope that you found these  
+links useful.  
+If you have any questions about Makers, 
+don™t hesitate to 
+contact us
+ - and please, 
+
+do come around for a Q&A session, or 
+
+a Demo Day, even before your course 
+
+starts, we would love to have you. 
+Prepare for 
+PreCourse 
+8
+On the first day of the PreCourse you will receive  
+a link to Teachable which will contain all the  
+
+PreCourse material. You will also have an invitation  
+
+to join Slack - our chat tool. This is what you will be  
+
+using for all communication.
+
+9
+9
+Tips for 
+remote 
+working
+From Diana Constantinou
+1. Organisation
+ 
+Structure to your day is important.  
+Routines are important for  
+normalising this new way of working.  
+Planning out your day with consistent  
+tasks will get you into a ˙ow with  
+working.  This includes the planning  
+ 
+of breaks, lunch and physical activity.  
+Create a good routine with  
+short exercise breaks. 
+Moving and stretching our bodies  
+energises the brain. The truth is,  
+endorphins are produced when  
+exercising, which increases happiness 
+and interest levels.
+2. Create a workspace
+ 
+Obviously an o˚ce is ideal, but 
+not always possible.  Try to create  
+an o˚ce space within the space  
+you have available  This will set out  
+clearly when you are working (in the 
+space); and when you are relaxing.  
+Prepare a conducive workspace. Apart  
+from having a high-speed internet  
+connection and a reliable router, get  
+a comfortable chair and think about a  
+second monitor or in the least a clear  
+display.  You are going to be staring at  
+the screen all day, o˝ and on.  
+If you cohabit try closing the 
+door when you are trying to  
+focus.  
+Clear communication is important.  
+Creating rules around video calls, or  
+focus time reduces mishaps due to 
+poor communication. For example,  
+when the door is closed or when my 
+headphones are on–..
+It is a good habit to mute your 
+microphone during conference calls  
+(unless you™re speaking) to minimise  
+the amount of audio feedback and  
+random sounds that interrupt the  
+conversation.
+
+10
+10
+3. Research/ stay up to date
+ 
+The good news is, you are not alone. 
+The world is transitioning from physically  
+working to remote.  There are a load of 
+really useful blogs and websites.  Try to  
+follow some people that are similar to  
+you and your context, follow them to 
+pick up tips.  Again, just a list to get you  
+started and in no way complete:
+The Five Levels of Remote Working,  
+a blog aimed to maximise your  
+effectiveness as a remote worker
+The Stress of Remote Working, a blog 
+by a software developer who has 
+worked from home for some time now
+How to thrive working from home, a 
+blog on some tips for effective home 
+working
+What is it like to work as a remote 
+software developer, a blog by current 
+software developers working remotely
+NHS blog - every mind matters, some 
+medical information on working from 
+home
+Just Giving blog on working from 
+home
+BBC news article with advice for 
+working from home during COVID-19
+4. Dress properly
+ 
+Resist the temptation to stay in your  
+pyjamas 24/7.  Remember how you  
+dress will also a˝ect your mental 
+perception.  It ™s important to follow  
+routines you would have normally put 
+in place.  Having a breakfast routine,  
+getting ready for work, and o˚cially  
+getting started.
+5. Concentration
+ 
+Cut o˝ slack: that said, know when  
+to shut o˝ Slack, or any other way  
+to communicate (like email) and just  
+focus on the work. So many hours of  
+productivity can be lost just by reading 
+other people conversations.
+Consider keeping the television turned  
+o˝. It can be a big distraction. The  
+radio or music on YouTube might be 
+better if you are the type who works 
+well with some background music.  
+Relaxing music creates an unwinding 
+mood, whereas up tempo soundtracks  
+keep the energy level high.  But you  
+just need to be aware of how noise is  
+a˝ecting your productivity.
+Stay o˝ social media. We are all guilty  
+of this one from time to time, and social 
+media can be one giant time-waster if  
+you™re not careful.
+
+11
+11
+6. For Parents
+ 
+Keep children in your plans. Due  
+to school closure, children may 
+also be around at home. Plan and  
+schedule some activities to occupy 
+them while you work.
+Have staggered lunchtime  
+to spend with children; for  
+instance, one partner can  
+have a lunch break at 11  
+am-12 pm, and the other  
+breaks at 12 pm-1 pm, so  
+2 hours are spent with  
+children.  
+Think about taking Saturday as  
+a school day, and giving them  
+one work day o˝, better chosen  
+for your busiest work day. It is  
+important to keep at least one  
+common weekend day together.  
+For all we know, working with  
+children around us might become  
+the new norm.
+
+12
+12
+Finance
+12
+
+13
+13
+How to pay your remaining
+ 
+fees: 
+You can pay your ˜nal fees via
+ 
+this link.
+Note: 
+Your fees need to be initiated
+, 
+ 
+they 
+will not be taken automatically
+ 
+from your account. 
+When are the final fees due? 
+On the 
+first day of your PreCourse,
+ 
+ 
+or before if you prefer. 
+What will happen if my 
+fees are not paid? 
+You will 
+not be allowed to join the 
+full-time course
+ until your ˜nal fees are 
+paid. 
+Are there any other 
+payment alternatives? 
+If you have had problems using 
+GoCardless you can also pay via bank 
+transfer, please follow the steps below: 
+> Add your ˜rst name initial and surname 
+and full-time start date as your reference 
+E.g. ASmith09 (September full-time)
+> Account name: Makers Academy
+> Sort code: 20-44-91
+> Account number: 20254797
+How can I pay my fees 
+ 
+from abroad?
+There are two options when trying 
+ 
+to pay from abroad:
+Transferwise:
+ ˜nd out more
+ 
+here
+ 
+Can I pay using a credit card?
+No, unfortunately we cannot accept 
+payments via credit cards. 
+If you have any problems with regards to paying your final fees, 
+please contact admissions@makers.tech and we™ll be happy to 
+help.
+
+14
+14
+Education at Makers is 
+designed to be empowering.  
+Being a software engineer  
+means looking at any problem  
+you encounter and believing  
+ﬁWith thoughtful effort, I can 
+solve this.ﬂ
+ 
+We trust you with three responsibilities:
+Ł
+ 
+Deciding what to aim for 
+ 
+(your goals).
+Ł
+ 
+Determining how to get there 
+ 
+(your plan).
+Ł
+ 
+Getting insight into your progress 
+(self-assessment).
+We believe that you are the best 
+ 
+person to lead these things. This 
+ 
+way, when someone asks you how 
+it ™s going, you should know pretty 
+accurately how you™re doing as 
+ 
+a software engineer, where you 
+ 
+want to get to, and how you™re 
+ 
+going to get there.
+You will know when to put in more 
+e˝ort, when to slow down, change 
+focus, employ your strengths 
+ 
+or strengthen your weaknesses. 
+ 
+You will know when you are ready 
+ 
+to apply for jobs. You™re in the 
+ 
+driving seat.
+What are your 
+responsibilities?
+14
+
+15
+15
+What are  
+ 
+the coaches™  
+ 
+responsibilities?
+So what™s our job?
+Ł
+ 
+To support you with the above.
+Ł
+ 
+To provide an environment 
+with the tools and motivation 
+necessary to achieve your goals.
+It ™s our job to give you the  
+prompts and starting-points  
+to train the habits of planning  
+and self-assessment required 
+to be a successful self-led  
+learner.
+ 
+And then there™s the matter of making the 
+environment here as rich in opportunities 
+to learn as possible. 
+ 
+ 
+If you™re not sure whether your code 
+is readable or not, it should be easy to 
+learn how to determine that, execute it, 
+and then engage productively with the 
+task of improving your code. Moreover, 
+the atmosphere and people around you 
+should inspire you to be better
+Not everyone will come here  
+knowing how to take control  
+of their own journey Š and  
+that™s fine.
+
+16
+16
+Curriculum
+16
+
+17
+17
+We have a carefully thought-
+out curriculum which  
+advances you in software  
+development week by week. 
+Students learn in peer-to-
+peer environments facilitated  
+by experienced facilitators.
+Ł
+ 
+Students pair programme for the 
+majority of the day.
+Ł
+ 
+Daily workshops & code reviews are 
+led by coaches.
+Ł
+ 
+Access to the Makers Students Slack 
+community
+Our course is designed to give you the 
+skills you need for working in a real 
+development team. From day one you™ll 
+be participating in stand-ups, retros and 
+pair programming. You™ll also learn about 
+TDD and agile, and through the course 
+you™ll manage your own projects using 
+di˝erent project management tools that 
+align with these principles. 
+Much of the course will be spent with 
+programming in Ruby, but the Makers 
+students ˜nish the course
+ language-
+agnostic
+: meaning that they will be able 
+to programme in any language. 
+Our course is constantly being developed 
+and re˜ned over time, but hopefully this 
+will give you an idea of what kinds of 
+things you™ll be working on.
+FIND OUT MORE
+A map of your 
+Makers Journey
+
+18
+18
+˜˚˛˝˙˚ˆˇ˚˘˘
+
+˚
+
+
+	ˆˆ˝˛˙
+˚ˆ˚
+
+˚†
+
+˚“
+
+˚‘
+
+˚
+
+˚†
+˜˚˛˝˙ˆˇ˘ˆ
+ ˆ
+˘˛˙ ˆ
+ ˆ
+˘ˆ˚ ˆ
+˚˘˘
+
+
+˝ˇˆˆ
+	˘˝ˆ	 ˆ
+˙˘ ˆ
+˚˝	 ˆ
+˚
+˚ ˆ
+˚˝	 ˆ
+˚
+ ˆ
+˚˚˙ ˆ
+˚
+˘ ˚
+˚˛ˆ˚
+˝ˇ˝€˝
+˚ˆ˛˚ˆ	˘ˆ˘˘ ˆ
+˛ˆ
+˘˙ˆˇ˘
+˛	ˆ†˛ˆ˚˚ˆ˘˝ˆ
+˘˝˚˚˚ˆ
+˘
+
+˘˘˝˚š
+ ˚
+—˚˘˘˚€ˆ•˚
+–
+ƒ˘˚˝ˇ ˚
+€˘˝ ˆ
+˘˙ˆ˝ˇ ˆ
+˘‡
+
+ˆ
+˚
+	ˆ‘˚˚
+ˆ‘˝˛˚ˆ‘ ˆ
+	˘‡˝˘ˆ˝˚˚˝˚ˆ˛˝˘˙ ˆ
+…—ˆˇ˘˝ˆ˛ˆ˘ˆ˚’˛˘ ˆ
+˘ˆ’ ˆ
+˚˚
+˘˚˝ˆ•˘ˆ˛˘˛˙	ˆ	˘ ˆ
+’˛˝
+⁄ˆ˚€
+–˘˘ˆ˛˙ ˆ
+ˇ˘˙ˆ‘˘˝ˆ˛˚˚ ˆ
+˚˝ˆ˛˚˝ˆ†˚ ˆ
+˝˚’˘˚˙ˆ⁄“š
+
+ˆ˚…ˆ˛ ˚
+˝
+‹˘˝ ˆ
+’˘ ˆ
+˘ˆ’˛˙ ˆ
+’˘˙’˛˘˝ˆ’ ˆ
+˘ˇˆ˘˝ˆ˘˙
+˙˚ˆ’ˇ˛˙˙˚
+ ˆ
+˛˙ˆ’˘ˆ˛˚˙ˆ˝˚
+˛˝ˆ
+˛˚˝ˆˇ˝˙ˆ˚
+ •ˆ ˚
+˝€˚˝˚ˇ ˚
+
+›˝˚˛˝˘ˆ
+˛ ˆ
+
+˘˙˛˚ˆ˛˙ˆ‘˘’ˆ
+˘˙ˆ˚’˚˝ ˆ
+˚˘ˇˆ	˘˝ˆ
+ ˆ
+’˘˛˙˚š ˆ
+˜˚˛˝˙ˆˇ˘ˆ
+˚ ˆ
+˝˚ˆ˛ ˆ
+˛
+
+ˆ	 ˆ
+˛
+’˛
+˚˚ ˆ
+˛ˆ’˘
+˚⁄ˆ
+˛
+’˛ ˆ
+	
+
+˚‹
+–˘
+
+˘ˆˇˇ
+˘’˚˚ ˆ
+˘ˆ
+ˆ˛ˆ˚ˆ˛ˆ
+˚˛ƒˆ˙ ˆ
+	ˆ˘˙ˆ˛
+
+
+˚›
+–˘
+
+˘ ˆ
+ ˆ
+˝˘’˚˚ˆ˙ˆ˛ ˆ
+˘ˆ
+ ˆ
+˛ˆ˛
+ˆ˛
+
+˚†
+–˙˛
+ˆ›˝
+’˛ˆ˚’˝˘ ˚
+˘˚‰
+
+˚„
+˚ˆˇˇˆ
+˘˚ ˆ
+ˆ
+˘ˆ˛ˆ˛ˆ˘’ ˆ
+˚
+
+˚
+–˙˛
+ˆ›˝
+
+˚”
+˘˝ˆ˙ˆ˛ˆ
+˘ˆ
+ ˆ
+˛ˆ’
+˘˙˚ˆ˘‘ˆ˛ˆ
+˚
+
+˙˘˙ ˆ
+˚ˆ˛
+
+˚‚
+
+
+ˆ˛ˆ˙
+˚ ˆ
+˛˚ˆ˚ˆ
+˛ˆ˙ˆ
+‰˛ˆ
+‰˚˝	
+
+˚‘
+
+
+ˆ˛ˆ	 ˆ
+ˆ
+˘˝˚ˆ˛ ˆ
+˛ˆ˛
+
+˚™
+
+
+ˆ˛ ˆ
+˙
+˚ˆ˛˚ ˆ
+˛ˆ˙ ˆ
+‰˛ ˆ
+˙˘ˆ‰˚˝	”
+
+˚“
+
+
+ˆ˛ ˆ
+˚ˆ˛
+˙ ˆ
+	
+
+ˆ˛˙š ˚
+˚
+˝ˇ˚
+ﬁ
+˚
+˝˛Œ
+	ˇ˚ ˚
+
+
+šˆ˛˚
+ ˚
+ˆ ˚
+ ˚
+ƒ˚
+˜
+˚
+˜˚˛˝˙ˆ˝ˇˇ˚˘ˆ˙˙
+˚ˇ˙˜˚˘˛˝
+˘˙
+˙
+˚˘ˇ˝	˚˝˙
+˘
+˙˚˘˚˚˘ˆ˙
+˛
+ˆ˚ˆ€
+˚
+˚
+ˇ˝˙
+˛˝˙˙
+˝˙
+˘ˇ˙ˇ ˙
+˝˝˙
+ˇ˙˝˙“˝˝˘˙˝
+˘˚˘ˆ ˙
+˚˘˝˙
+˛ ˙
+˚ ˙
+˚˙ˇ˝˙˘˙
+ˇ˙˝˝˙˝˙
+˚˘ˇ ˙
+˚ˇ˙˙
+ƒˆ•šš˚˝‰˛ˆ˚
+ ˚
+
+˚
+
+˙ ˙
+˝˝˙	˝ ˙
+
+˚Œ
+˚
+•˝˙
+ˆ˝˙	ˇ˚˘ˆ˙˙
+
+˘†ˇ˙
+˘ˆ˝˙
+˘
+˙˝†
+˙˚˛˝˙˝˝˙˙
+	˝˘˙˝˘˙˙
+
+˚
+‡˝ˆ
+˙˚˚˘ˆ˙˝	˝˘ˇ˙
+˝˘ ˙
+ˇ˙
+
+˚†
+
+˚“
+
+˚‘
+€˘‡
+
+ˆˇ˚˛˝ ˆ
+˛’ˆ‘˝ ˆ
+˛˝˚˚˝ˆ˚˛ ˆ
+˛˙ˆ
+
+ˆ˘ˆ
+˚ˆ˙˚ˆ‘˘˝ ˆ
+˚˝˚ˆ˛˙ ˆ
+˘ˆ’˚ˆ
+˚
+€˘‡
+
+ˆ˚ˆ˚˚ˆ
+˚˝˚ˆ
+˚ ˆ
+˚˚ˆˇ
+˚ˆ	˘ˆ
+’˘ˆ’˘˚ ˆ
+ ˆ
+’˘˛˙˚ˆ	˘‡˝˚ˆ
+˚˝˚˚ˆ˙š
+˚ ˆ
+˘˝ˆ˚˚ˆ’	’
+˚ ˆ
+˚˝˚ˆ˛	ˆ ˆ
+‡ ˆ
+˘ˆ˛ˆ˚˝˘˙˛
+ ˆ
+˝˘˝ ˆ
+˘’˚ˆ	˘˝˚
+‘ ˆ
+˚’ˇˆ˝˘‘˚˘˙˛
+ˆˇ˘ ˆ
+˛	ˆ˘ˆˇ˝˚ˆ	˘š ˆ
+ƒˆ•šš˚ˆ ˚
+˚
+˝ ˚
+˛˙˚˚
+˘ ˚
+Œ
+18
+
+19
+19
+At Makers we advise you to blog during your time 
+with us. Not only does it allow you to re˙ect on your 
+learning, it also makes a signi˜cant di˝erence in the 
+job-hunting process. 
+Find out more here
+Makers 
+ 
+Blogging 
+ 
+Opportunity!
+19
+
+20
+20
+Meet the 
+Makers 
+community
+20
+
+21
+21
+GET TO KNOW
+ 
+The team 
+who helps 
+you find
+ 
+a job
+READ
+More 
+student 
+stories
+GET TO KNOW
+ 
+Your 
+coaches 
+here
+
+22
+22
+Our community is what makes Makers. 
+From mentoring opportunities, to 
+social events to job-hunting, the alumni 
+community is there to support you 
+from day one at Makers, during the 
+course and throughout your journey 
+ 
+in the world of software development.
+Once 
+ 
+a Maker, 
+a l ways  
+a Maker
+22
+
+23
+23
+Code 
+ 
+of 
+Conduct
+Our open-source Community 
+strives to be: 
+Friendly and patient
+Welcoming
+Considerate
+Respectful
+Careful in the words that we choose
+Careful to understand why we disagree
+This Code of Conduct 
+outlines our expectations 
+for participants within 
+the Makers community, as 
+well as steps for reporting 
+unacceptable behaviour. 
+We are committed to providing a 
+welcoming and inspiring community for 
+all, and expect our code of conduct to 
+be honoured. Anyone who violates this 
+Code of Conduct may be banned from 
+the community. Please take the time to 
+read the full Code of Conduct
+ 
+here.
+23
+
+24
+24
+We™re excited  
+to welcome  
+you very soon!
+24
+

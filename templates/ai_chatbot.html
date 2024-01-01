@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maker's Assistant</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #chat-container {
+            width: 40%;
+            height: 70vh;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        #chat-title {
+            background-color: #4a4e69;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        #chat-history {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .chat-message {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #9a8c98;
+            color: white;
+            border-radius: 4px;
+            max-width: 80%;
+        }
+        .user-message {
+            align-self: flex-end;
+            background-color: #4a4e69;
+            color: white;
+        }
+        #chat-form {
+            display: flex;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+        #chat-input {
+            flex-grow: 1;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        #chat-submit {
+            background-color: #4a4e69;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-title">
+            <h3>Maker's Assistant</h3>
+        </div>
+        <div id="chat-history">
+            <!-- Chat history will go here -->
+        </div>
+        <form id="chat-form">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button type="submit" id="chat-submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var input = document.getElementById('chat-input');
+            var message = input.value;
+            if (message) {
+                addMessageToHistory('You', message, 'user-message');
+                fetch('/query', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ query: message, chat_history: [] })
+                })
+                .then(response => response.json())
+                .then(data => addMessageToHistory('Maker\'s Assistant', data.answer, 'chat-message'))
+                .catch(error => console.error('Error:', error));
+                input.value = '';
+            }
+        });
+
+        function addMessageToHistory(sender, message, cssClass) {
+            var history = document.getElementById('chat-history');
+            var messageDiv = document.createElement('div');
+            messageDiv.classList.add(cssClass);
+            messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            history.appendChild(messageDiv);
+            history.scrollTop = history.scrollHeight; // Scroll to bottom
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

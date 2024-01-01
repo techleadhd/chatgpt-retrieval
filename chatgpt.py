@@ -1,52 +1,91 @@
+
 import os
-import sys
-
 import openai
-from langchain.chains import ConversationalRetrievalChain, RetrievalQA
-from langchain.chat_models import ChatOpenAI
-from langchain.document_loaders import DirectoryLoader, TextLoader
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.indexes import VectorstoreIndexCreator
-from langchain.indexes.vectorstore import VectorStoreIndexWrapper
-from langchain.llms import OpenAI
-from langchain.vectorstores import Chroma
+import requests
+from flask import Flask, request, jsonify, render_template
+from flask import current_app
+import json
+from PyPDF2 import PdfReader
+from flask_sqlalchemy import SQLAlchemy
+import pdfplumber
+from bs4 import BeautifulSoup
+from lib.config import Config
+from lib.db_models import db
+from lib.db_models import ExtractedData
+from lib.db_models import create_app, db, store_data, query_data
+from lib.search import simple_search
+from flask import Flask
+from lib.config import Config
+from lib.db_models import db
 
-import constants
 
-os.environ["OPENAI_API_KEY"] = constants.APIKEY
 
-# Enable to save to disk & reuse the model (for repeated queries on the same data)
-PERSIST = False
+from flask import Flask
+from lib.db_models import db
 
-query = None
-if len(sys.argv) > 1:
-  query = sys.argv[1]
 
-if PERSIST and os.path.exists("persist"):
-  print("Reusing index...\n")
-  vectorstore = Chroma(persist_directory="persist", embedding_function=OpenAIEmbeddings())
-  index = VectorStoreIndexWrapper(vectorstore=vectorstore)
-else:
-  #loader = TextLoader("data/data.txt") # Use this line if you only need data.txt
-  loader = DirectoryLoader("data/")
-  if PERSIST:
-    index = VectorstoreIndexCreator(vectorstore_kwargs={"persist_directory":"persist"}).from_loaders([loader])
-  else:
-    index = VectorstoreIndexCreator().from_loaders([loader])
+def create_app():
+    app = Flask(__name__)
+    app.config.from_object(Config)
 
-chain = ConversationalRetrievalChain.from_llm(
-  llm=ChatOpenAI(model="gpt-3.5-turbo"),
-  retriever=index.vectorstore.as_retriever(search_kwargs={"k": 1}),
-)
+    # Initialize extensions with the app instance
+    db.init_app(app)
 
-chat_history = []
-while True:
-  if not query:
-    query = input("Prompt: ")
-  if query in ['quit', 'q', 'exit']:
-    sys.exit()
-  result = chain({"question": query, "chat_history": chat_history})
-  print(result['answer'])
+    return app
 
-  chat_history.append((query, result['answer']))
-  query = None
+
+
+
+
+
+
+@app.route('/')
+def chatbot():
+    return render_template('ai_chatbot.html')
+
+@app.route('/query', methods=['POST'])
+def handle_query():
+    data_request = request.json
+    query = data_request.get('query')
+    
+    if not query:
+        return jsonify({"error": "No query provided"}), 400
+
+    context = simple_search(query)
+
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": query},
+                {"role": "assistant", "content": context},
+            ]
+        )
+        answer = response.choices[0].message['content']
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+    return jsonify({"answer": answer})
+
+
+
+@app.route('/test_error')
+def test_error():
+    raise Exception('Test exception')
+
+
+if __name__ == '__main__':
+    app.run(debug=False, port=5001) # Set to False in production
+
+
+
+
+
+
+
+
+
+
+
+

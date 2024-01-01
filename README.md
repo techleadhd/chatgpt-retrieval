@@ -1,28 +1,48 @@
-# chatgpt-retrieval
+## Chatbot for makers.tech
 
-Simple script to use ChatGPT on your own files.
+openAI chatgpt3 free tier integration
+Chatbot data from data files PDF, text
+chatbot data extraction from makers.tech
 
-Here's the [YouTube Video](https://youtu.be/9AXP7tCI9PI).
+
+## update Constants
+# Replace with your own OpenAI API Key https://platform.openai.com/account/api-keys
+# and rename this file to constants.py.
+#APIKEY =  "sk-<your key here>"
+
+
+
 
 ## Installation
 
-Install [Langchain](https://github.com/hwchase17/langchain) and other required packages.
-```
-pip install langchain openai chromadb tiktoken unstructured
-```
-Modify `constants.py.default` to use your own [OpenAI API key](https://platform.openai.com/account/api-keys), and rename it to `constants.py`.
+1. pipenv install
 
-Place your own data into `data/data.txt`.
+2. pinev shell
 
-## Example usage
-Test reading `data/data.txt` file.
-```
-> python chatgpt.py "what is my dog's name"
-Your dog's name is Sunny.
-```
+3. pip install pytest
 
-Test reading `data/cat.pdf` file.
-```
-> python chatgpt.py "what is my cat's name"
-Your cat's name is Muffy.
-```
+
+3. pip install flask
+
+4. pip install beautifulsoup4
+
+    pip install requests beautifulsoup4
+
+
+5. pip install PyPDF2
+
+6. pip install scrapy
+
+7. pytest
+
+8. pip install aiofiles
+
+9. pip install elasticsearch
+
+10. psql CREATE DATABASE chatbot_db;
+
+11. pip install Flask-SQLAlchemy psycopg2-binary
+
+12. pip install pdfplumber
+
+

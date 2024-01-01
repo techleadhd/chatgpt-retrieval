@@ -1,0 +1,7 @@
+steps:
+    - name: My step
+      env:
+        API_KEY: ${{ secrets.APIKEY }}
+      run: |
+        # You can use the secret as an environment variable in this step
+        echo "API key is $API_KEY"
