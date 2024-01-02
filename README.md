@@ -1,9 +1,3 @@
----
-runme:
-  id: 01HK4NXTB4EC9T3SR79EKFFS1W
-  version: v2.0
----
-
 # chatgpt-retrieval
 
 Simple script to use ChatGPT on your own files.
